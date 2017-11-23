@@ -33,6 +33,13 @@ def bin_sum(a, b):
             c[i-1]+=1;
     return c;
 
+def bin_or(a, b):
+    n = max(a.shape[0], b.shape[0]);
+    c = np.ndarray(shape = (n,), dtype=np.int);
+    for i in np.arange(0, n, 1):
+        c[i] = (a[i] or b[i])
+    return c;
+
 def bin_multipl(A, B):
     shape_a = A.shape;
     shape_b = B.shape;
